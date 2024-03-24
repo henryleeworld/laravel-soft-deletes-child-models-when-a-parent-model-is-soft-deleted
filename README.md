@@ -1,4 +1,4 @@
-# Laravel 9 軟刪除（恢復）父模型後，軟刪除（恢復）子模型
+# Laravel 10 軟刪除（恢復）父模型後，軟刪除（恢復）子模型
 
 引入 tihab 的 soft-deletes-parent 套件來擴增軟刪除（恢復）父模型後，軟刪除（恢復）子模型，資料並不是真的從資料庫被移除了。
 
@@ -26,5 +26,5 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/HCbijo0.png)
+![](https://i.imgur.com/JlSGj98.png)
 > 在查詢使用軟刪除功能的模型時，被「刪除」的模型資料不會出現在查詢結果裡
