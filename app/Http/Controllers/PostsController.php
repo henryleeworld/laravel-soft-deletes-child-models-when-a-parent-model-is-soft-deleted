@@ -9,20 +9,20 @@ class PostsController extends Controller
 {
     public function show() 
     {
-        echo '目前貼文總筆數：' . Post::count() . PHP_EOL;
-        echo '目前貼文（含作者已軟刪除）總筆數：' . Post::withParentTrashed()->count() . PHP_EOL;
-        echo '目前貼文（僅作者已軟刪除）總筆數：' . Post::onlyParentTrashed()->count() . PHP_EOL;
+        echo __('Total number of posts so far:') . Post::count() . PHP_EOL;
+        echo __('The current total number of posts (including soft-deleted by the author):') . Post::withParentTrashed()->count() . PHP_EOL;
+        echo __('The current total number of posts (only the author has been soft-deleted):') . Post::onlyParentTrashed()->count() . PHP_EOL;
         $authorId = 2;
         $author = Author::findOrFail($authorId);
-        echo '軟刪除作者代號' . ' ' . $authorId . PHP_EOL;
+        echo __('Soft delete author ID') . ' ' . $authorId . PHP_EOL;
         $author->delete();
-        echo '目前貼文總筆數：' . Post::count() . PHP_EOL;
-        echo '目前貼文（含作者已軟刪除）總筆數：' . Post::withParentTrashed()->count() . PHP_EOL;
-        echo '目前貼文（僅作者已軟刪除）總筆數：' . Post::onlyParentTrashed()->count() . PHP_EOL;
-        echo '恢復作者代號' . ' ' . $authorId . PHP_EOL;
+        echo __('Total number of posts so far:') . Post::count() . PHP_EOL;
+        echo __('The current total number of posts (including soft-deleted by the author):') . Post::withParentTrashed()->count() . PHP_EOL;
+        echo __('The current total number of posts (only the author has been soft-deleted):') . Post::onlyParentTrashed()->count() . PHP_EOL;
+        echo __('Restore author ID') . ' ' . $authorId . PHP_EOL;
         $author->restore();
-        echo '目前貼文總筆數：' . Post::count() . PHP_EOL;
-        echo '目前貼文（含作者已軟刪除）總筆數：' . Post::withParentTrashed()->count() . PHP_EOL;
-        echo '目前貼文（僅作者已軟刪除）總筆數：' . Post::onlyParentTrashed()->count() . PHP_EOL;
+        echo __('Total number of posts so far:') . Post::count() . PHP_EOL;
+        echo __('The current total number of posts (including soft-deleted by the author):') . Post::withParentTrashed()->count() . PHP_EOL;
+        echo __('The current total number of posts (only the author has been soft-deleted):') . Post::onlyParentTrashed()->count() . PHP_EOL;
     }
 }

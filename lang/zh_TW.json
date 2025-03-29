@@ -1,0 +1,7 @@
+{
+    "Restore author ID": "恢復作者代號",
+    "Soft delete author ID": "軟刪除作者代號",
+    "The current total number of posts (including soft-deleted by the author):": "目前貼文（含作者已軟刪除）總筆數：",
+    "The current total number of posts (only the author has been soft-deleted):": "目前貼文（僅作者已軟刪除）總筆數：",
+    "Total number of posts so far:": "目前貼文總筆數："
+}
